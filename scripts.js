@@ -15,6 +15,7 @@ return "rock"
     return "paper"
 } 
 }
+
 function getHumanChoice(){
     let choice=  prompt("Choose wisely!")
 if (choice === "rock"){
@@ -61,15 +62,18 @@ else if(humanChoice === "scissors" && computerChoice === "paper" ){
     return "You win! Scissors beats paper you champion!" + humanScore++ + "-" + computerScore
 
 }
-function playGame(){
-for (let computerScore || humanScore = 0; computerScore || humanScore < 5; computerScore || humanScore++) {
-playRound()
 }
 
-}
+function playGame(){
+for (let i = 0; i < 5; i++){
+    playRound()
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+console.log(playRound(humanSelection, computerSelection));
 
-console.log(playRound(humanSelection, computerSelection))
+}
+}
+
+
