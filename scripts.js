@@ -29,20 +29,18 @@ if (choice === "rock"){
 
 
 
-
-
 let humanScore= 0;
 let computerScore= 0;
 function playRound(humanChoice, computerChoice) {
 if(humanChoice === "rock" && computerChoice === "paper"){
-    return "You lose! Paper beats rock you dumbass!" + computerScore++ + "-" + humanScore
+    return "You lose! Paper beats rock you dumbass!" + ++computerScore + "-" + humanScore
 }
 else if(humanChoice === "scissors" && computerChoice === "rock"){
-    return "You lose! Rock beats scissors you dumbass!" + computerScore++ + "-" + humanScore
+    return "You lose! Rock beats scissors you dumbass!" + ++computerScore + "-" + humanScore
 
 }
 else if(humanChoice === "paper" && computerChoice === "scissors"){
-    return "You lose! Scissors beats paper you dumbass!" + computerScore++ + "-" + humanScore
+    return "You lose! Scissors beats paper you dumbass!" + ++computerScore + "-" + humanScore
 }
 
 else if(humanChoice === computerChoice ){
@@ -51,29 +49,27 @@ else if(humanChoice === computerChoice ){
 }
 
 else if(humanChoice === "paper" && computerChoice === "rock" ){
-    return "You win! Paper beats rock you champion!"  + humanScore++ + "-" + computerScore
+    return "You win! Paper beats rock you champion!"  + ++humanScore + "-" + computerScore
 
 }
 else if(humanChoice === "rock" && computerChoice === "scissors" ){
-    return "You win! Rock beats scissors you champion!" + humanScore++ + "-" + computerScore
+    return "You win! Rock beats scissors you champion!" + ++humanScore + "-" + computerScore
 
 }
 else if(humanChoice === "scissors" && computerChoice === "paper" ){
-    return "You win! Scissors beats paper you champion!" + humanScore++ + "-" + computerScore
+    return "You win! Scissors beats paper you champion!" + ++humanScore + "-" + computerScore
 
 }
 }
 
 function playGame(){
 for (let i = 0; i < 5; i++){
-    playRound()
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
 console.log(playRound(humanSelection, computerSelection));
 
 }
 }
 
-
+playGame()
