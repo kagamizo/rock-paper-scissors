@@ -17,7 +17,7 @@ return "rock"
 }
 
 function getHumanChoice(){
-    let choice=  prompt("Choose wisely!")
+    let choice=  prompt("Choose wisely!").toLowerCase();
 if (choice === "rock"){
     return "rock"
 } else if (choice === "paper"){
